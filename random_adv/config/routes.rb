@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :users do 
     resources :adventures
+    resources :prev_adventures, only: :index
   end
 
 

@@ -1,0 +1,7 @@
+class AdventuresController < ApplicationController
+
+
+
+
+
+end
