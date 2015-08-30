@@ -1,6 +1,5 @@
 class AdventuresController < ApplicationController
 
-
 	def new
 	end
 

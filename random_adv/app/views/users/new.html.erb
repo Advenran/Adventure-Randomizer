@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Enter your information below to begin your journey!</h1>
+
+	<%= form_for @user do |f| %>
+		Enter your email
+		<%= f.text_field :email %> <br>
+		Enter your name
+		<%= f.text_field :name %> <br>
+		Enter your password
+		<%= f.password_field :password %> <br>
+		<%= f.submit "Create account" %>
+	<% end %>
+
+	<div>
+		If you're already a member,
+		<a href="/sessions/new"> Log in here</a>
+	</div>
+</body>
+</html>
