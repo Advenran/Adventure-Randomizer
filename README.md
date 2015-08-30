@@ -14,10 +14,12 @@ You can select your budget and we will find a location that is perfect for your 
 + Sam Smale
 
 ##Technology used
+
 ###Backend
 + Ruby on Rails
 + Postgresql
-##Frontend
+
+###Frontend
 + HTML & CSS
 + Twitter Bootstrap
 + Animate.css
