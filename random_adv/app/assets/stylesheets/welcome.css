@@ -1,5 +1,52 @@
 body{
-	background-color: #16a085;
+	color: #16a085;
 	font-family: Montserrat;
+}
+
+a{
+	color: #55bbaa;
+}
+
+#main{
+	animation-delay: 2s;
+}
+
+#mainone{
+	animation-delay: 5s;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+
+.main-butt{
+	text-align: center;
+}
+
+.header{
+	padding-bottom: 2%;
+	background-color: #16a085;
+	border-bottom: 5px solid #55bbaa;
+}
+
+.footer{
+	background-color: #16a085;
+	position: absolute;
+    bottom: 0;
+}
+
+#lr{
+	margin-bottom: -1.5em;
 }
 
