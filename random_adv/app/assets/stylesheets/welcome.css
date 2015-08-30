@@ -50,6 +50,7 @@ video#bgvid {
 .footer{
 	background-color: rgba(22, 160, 133,0.7);
 	border-top: 5px solid #55bbaa;
+	text-align: center
 }
 
 #lr{
