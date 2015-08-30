@@ -5,6 +5,12 @@ body{
 
 a{
 	color: #55bbaa;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color:white;
 }
 
 #main{
@@ -34,19 +40,20 @@ video#bgvid {
 	text-align: center;
 }
 
+
 .header{
 	padding-bottom: 2%;
-	background-color: #16a085;
+	background-color: rgba(22, 160, 133,0.7);
 	border-bottom: 5px solid #55bbaa;
 }
 
 .footer{
-	background-color: #16a085;
-	position: absolute;
-    bottom: 0;
+	background-color: rgba(22, 160, 133,0.7);
+	border-top: 5px solid #55bbaa;
 }
 
 #lr{
 	margin-bottom: -1.5em;
 }
+
 
