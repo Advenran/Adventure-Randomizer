@@ -21,7 +21,7 @@ Adventure.create({location: 'ChIJaQ2FO55ZwokRKYAlmF0IlzA', price_per_person: fal
 Adventure.create({location: 'ChIJkXQ3_INZwokRE74ZvG46Jjc', price_per_person: false, price_event: 0, timeframe: 2, hints: "Momofuko noodle bar"})
 Adventure.create({location: 'ChIJFTweVbZZwokRNkSu_ncOwJs', price_per_person: true, price_event: 85, timeframe: 2, hints: "Sleep no more"})
 
-User.create({name: 'Matt', email: 'Matt@wingit.com', password_digest: 'password'})
-User.create({name: 'Sam', email: 'Sam@wingit.com', password_digest: 'password'})
-User.create({name: 'Ethan', email: 'Ethan@wingit.com', password_digest: 'password'})
-User.create({name: 'David', email: 'David@wingit.com', password_digest: 'password'})
+User.create({name: 'Matt', email: 'Matt@wingit.com', password: 'password'})
+User.create({name: 'Sam', email: 'Sam@wingit.com', password: 'password'})
+User.create({name: 'Ethan', email: 'Ethan@wingit.com', password: 'password'})
+User.create({name: 'David', email: 'David@wingit.com', password: 'password'})
