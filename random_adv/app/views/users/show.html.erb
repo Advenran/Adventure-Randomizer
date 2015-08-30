@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>Welcome, <%= @current_user.name %>! </h3>
+	<%= link_to "past adventures", user_prev_adventures_path(@current_user) %>
+
+	<h2>Ready to go on a journey?</h2>
+
+</body>
+</html>
