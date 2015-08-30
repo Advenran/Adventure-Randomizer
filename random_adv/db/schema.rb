@@ -18,9 +18,13 @@ ActiveRecord::Schema.define(version: 20150828234946) do
 
   create_table "adventures", force: :cascade do |t|
     t.string  "location"
+    t.integer "per_person"
     t.boolean "price_per_person"
     t.integer "price_event"
+    t.string  "hints"
     t.integer "timeframe"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "prev_adventures", force: :cascade do |t|
