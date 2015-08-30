@@ -2,7 +2,10 @@
 
 ##Application description
 Are you ready for an adventure?
-Wingit is the perfect application for the everyday NYC adventurer. You dont know where in the big apple you will end up! And the best part? We cater to your specific needs. You can select your budget and we will find a location that is perfect for your wallet and yet still intreguing enough for your mind. We cater to any means of transportation and if your feeling classy , you can even call yourself a mystery uber. 
+
+Wingit is the perfect application for the everyday NYC adventurer. You dont know where in the big apple you will end up! And the best part? We cater to your specific needs. 
+
+You can select your budget and we will find a location that is perfect for your wallet and yet still intreguing enough for your mind. We cater to any means of transportation and if your feeling classy , you can even call yourself a mystery uber. 
 
 ##Team members
 + David Patlut
