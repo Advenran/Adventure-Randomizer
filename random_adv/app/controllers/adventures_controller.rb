@@ -32,9 +32,12 @@ class AdventuresController < ApplicationController
 
 	def create
 		#timeframe selected
-		timeframe = body[:amount_time]
-		#budget selected
+		amount_time = body[:amount_time]
 		#people selected
+		amount_people = params[:amount_people]
+		#amount selected
+		amount_spend = params[:amount_spend]
+		#adventure.where({})
 		@adventure_choice = Adventure.where({})
 
 

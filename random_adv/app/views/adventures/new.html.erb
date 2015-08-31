@@ -15,16 +15,17 @@
 
 		<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
 
+		<%= form_tag  do %>
+		Enter your $
+		<%= f.text_field :amount_spend %> <br>
+		Enter amount of people
+		<%= f.text_field :amount_people %> <br>
+		Enter minutes for adventure
+		<%= f.text_field :amount_time %> <br>
+		<%= f.submit "submit" %>
+	<% end %>
 
-		<%= form_tag do %>
-		How much time are you trying to kill?
-		<%= range_field_tag :amount_time, :in => 60...360, :step => 30 %> <br>
-		How many in your party?
-		<%= range_field_tag :amount_people, :in => 1..10, :step => 1 %> <br>
-		Max $ each person wants to spend?
-		<%= range_field_tag :amount_spend, :in => 0..200, :step => 5 %> <br>
 
-		<% end %>
 		
 	</body>
 </html>
