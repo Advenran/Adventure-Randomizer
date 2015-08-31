@@ -6,6 +6,12 @@
 </head>
 <body>
 	<h1>Here are your previous adventures, <%= @current_user.name %> </h1>
+
+	
+
+	<% @prev_adven.each do |adven| %>
+		<li> <%= adven.adventure_id %> </li>
+	<% end %>
 	
 </body>
 </html>
