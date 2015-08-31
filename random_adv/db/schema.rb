@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150828234946) do
   enable_extension "plpgsql"
 
   create_table "adventures", force: :cascade do |t|
+    t.string "name"
     t.string  "location"
     t.integer "per_person"
     t.boolean "price_per_person"
@@ -29,7 +30,7 @@ ActiveRecord::Schema.define(version: 20150828234946) do
 
   create_table "prev_adventures", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "event_id"
+    t.integer  "adventure_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
