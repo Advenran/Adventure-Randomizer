@@ -14,6 +14,8 @@ class AdventuresController < ApplicationController
 		# to test
 		puts "the current weather for your adventure is #{weather} and #{temperature}F!"
 
+		@adventure = Adventure.new
+
 	end
 
 

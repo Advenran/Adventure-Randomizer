@@ -4,15 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
-<body>
-	<h3>Welcome, <%= link_to @current_user.name, edit_user_path(@current_user) %>! </h3>
-	<%= link_to "past adventures", user_prev_adventures_path(@current_user) %>
+	<body>
+		<h3>Welcome, <%= link_to @current_user.name, edit_user_path(@current_user) %>! </h3>
+		<%= link_to "past adventures", user_prev_adventures_path(@current_user) %>
 
-	<h2>Enter info below to start on your adventure!</h2>
+		<h2>Enter info below to start on your adventure!</h2>
 
-	<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
+		<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
 
-	
-	
-</body>
+		<%= form_for @adventure do |f| %>
+		How much time are you trying to kill?
+		<%= f.text_field :amount_time %> <br>
+		How many in your party?
+		<%= f.text_field :amount_people %> <br>
+		What is the max $ each person wants to spend?
+		<%= f.password_field :amount_spend %> <br>
+		<%= f.submit "submit" %>
+		<% end %>
+		
+	</body>
 </html>
+
+
