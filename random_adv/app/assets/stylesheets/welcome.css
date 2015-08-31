@@ -1,25 +1,3 @@
-body{
-	color: #16a085;
-	font-family: Montserrat;
-}
-
-a{
-	color: #55bbaa;
-	text-decoration: none;
-}
-
-a:hover{
-	text-decoration: none;
-	color:white;
-}
-
-#main{
-	animation-delay: 2s;
-}
-
-#mainone{
-	animation-delay: 5s;
-}
 
 video#bgvid { 
     position: fixed;
@@ -36,39 +14,5 @@ video#bgvid {
     background-size: cover; 
 }
 
-.main-butt{
-	text-align: center;
-}
-
-
-.header{
-	padding-bottom: 2%;
-	background-color: rgba(22, 160, 133,0.7);
-	border-bottom: 5px solid #55bbaa;
-}
-
-.footer{
-	background-color: rgba(22, 160, 133,0.7);
-	border-top: 5px solid #55bbaa;
-	text-align: center;
-	padding-top:0.5%;
-}
-
-#lr{
-	margin-bottom: -1.5em;
-	position: relative;
-    top: 20px;
-}
-
-#copyright{
-	color:white;
-}
-
-#logo{
-	    margin: auto;
-	    position: relative;
-    	top: 4px;
-}
-}
 
 
