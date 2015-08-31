@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
-			redirect_to user_path(user)
+			redirect_to new_user_adventure_path(user)
 		else
 			redirect_to sessions_new_path
 		end
