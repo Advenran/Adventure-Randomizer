@@ -32,7 +32,7 @@ class AdventuresController < ApplicationController
 
 	def create
 		#timeframe selected
-		amount_time = body[:amount_time]
+		amount_time = params[:amount_time]
 		#people selected
 		amount_people = params[:amount_people]
 		#amount selected
