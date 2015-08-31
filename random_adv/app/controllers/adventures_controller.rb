@@ -16,6 +16,25 @@ class AdventuresController < ApplicationController
 			# to test
 			puts "the current weather for your adventure is #{weather} and #{temperature}F!"
 
+
+
+		if logged_in? && check_current_user? #this is our definition of logged in
+			@current_user = User.find(session[:user_id])
+			#below is the code to generate a random adventure
+		else
+				# redirect_to user_path(actual_user)
+		end
+
+		@adventure = Adventure.new
+
+
+	end
+
+	def create
+		@adventure_choice = Adventure.where[rand(Adventure.all.length)]
+
+
+
 		#grab the affairs for the user accessing the route and pass them into a template
 		if logged_in? && check_current_user? #this is our definition of logged in
 			@current_user = User.find(session[:user_id])

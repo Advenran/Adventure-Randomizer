@@ -4,16 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
-<body>
-	<h3>Welcome, <%= link_to @current_user.name, edit_user_path(@current_user) %>! </h3>
-	<%= link_to "past adventures", user_prev_adventures_path(@current_user) %>
+	<body>
+		<h3>Welcome, <%= link_to @current_user.name, edit_user_path(@current_user) %>! </h3>
+		<%= link_to "past adventures", user_prev_adventures_path(@current_user) %>
 
 	<h2>Enter info below to start on your adventure!</h2>
 	<h3> Current weather <%= @current_forecast %> </h3>
 
-	<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
+		<h2>Enter info below to start on your adventure!</h2>
+
+		<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
 
 
-	
-</body>
+		<%= form_tag do %>
+		How much time are you trying to kill?
+		<%= range_field_tag :amount_time, :in => 60...360, :step => 30 %> <br>
+		How many in your party?
+		<%= range_field_tag :amount_people, :in => 1..10, :step => 1 %> <br>
+		Max $ each person wants to spend?
+		<%= range_field_tag :amount_spend, :in => 0..200, :step => 5 %> <br>
+
+		<% end %>
+		
+	</body>
 </html>
+
