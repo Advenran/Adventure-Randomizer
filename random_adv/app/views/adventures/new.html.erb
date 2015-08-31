@@ -8,8 +8,7 @@
 		<h3>Welcome, <%= link_to @current_user.name, edit_user_path(@current_user) %>! </h3>
 		<%= link_to "past adventures", user_prev_adventures_path(@current_user) %>
 
-	<h2>Enter info below to start on your adventure!</h2>
-	<h3> Current weather <%= @current_forecast %> </h3>
+	<h3><%= @current_forecast %> </h3>
 
 		<h2>Enter info below to start on your adventure!</h2>
 
