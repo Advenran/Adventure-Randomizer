@@ -1,4 +1,4 @@
-# Wingit.nyc
+<img src="http://i.imgur.com/QILYYsJ.png"/>
 
 ##Application description
 Are you ready for an adventure?
