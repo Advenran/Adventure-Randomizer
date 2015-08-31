@@ -31,7 +31,11 @@ class AdventuresController < ApplicationController
 	end
 
 	def create
-		@adventure_choice = Adventure.where[rand(Adventure.all.length)]
+		#timeframe selected
+		timeframe = body[:amount_time]
+		#budget selected
+		#people selected
+		@adventure_choice = Adventure.where({})
 
 
 
