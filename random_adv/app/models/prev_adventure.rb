@@ -1,3 +1,3 @@
-class Prev_adventure < ActiveRecord::Base
+class Prev_Adventure < ActiveRecord::Base
 	belongs_to :user
 end
