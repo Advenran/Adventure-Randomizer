@@ -5,12 +5,12 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1>Here are your previous adventures, <%= @current_user.name %> </h1>
+	<h3>Here are your previous adventures, <%= @current_user.name %> </h3>
 
 
 
-	<% @prev_adven.each do |adven| %>
-		<li> <%= adven.adventure_id %> </li>
+	<% @current_user.adventures.each do |adven| %>
+		<li> <%= adven.name %> on <%= adven.created_at %></li>
 	<% end %>
 
 	
