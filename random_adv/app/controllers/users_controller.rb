@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 		if logged_in? && check_current_user?
 			@current_user = User.find(session[:user_id])
 		else
-			redirect_to user_path(actual_user)
+			redirect_to new_user_adventure_path(actual_user)
 		end
 	end
 
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 			@current_user.update(user_params)
 			redirect_to edit_user_path
 		else
-			redirect_to user_path(actual_user)
+			redirect_to new_user_adventure_path(actual_user)
 		end
 	end
 
