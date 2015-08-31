@@ -6,6 +6,16 @@
 </head>
 <body>
 	<h3>Edit your account, <%= @current_user.name %></h3>
+
+	<%= form_for @user do |f| %>
+		Enter your email
+		<%= f.text_field :email %> <br>
+		Enter your name
+		<%= f.text_field :name %> <br>
+		Enter your password
+		<%= f.password_field :password %> <br>
+		<%= f.submit "Update account" %>
+	<% end %>
 	
 </body>
 </html>
