@@ -61,6 +61,9 @@ Adventure.create({name: "Little Branch" ,location: "ChIJjY7y6ZJZwokRXF5CA_X4l-I"
 Adventure.create({name: "Old Rabbit Club" ,location: "ChIJsU0rhJFZwokRmUJmeDamSLo", price_per_person: true ,per_person:  30, price_event: 0, timeframe: 120, hints: "Follow the yellow rabbit"})
 Adventure.create({name: "Morbid Anatomy Museum" ,location: "ChIJRRCONVRawokRUHEzv2hWkus", price_per_person: true ,per_person:  8, price_event: 0, timeframe: 120, hints: "Morbid Anatomy Museum"})
 Adventure.create({name: "Wave Hill" ,location: "ChIJC21UnrXzwokRn8wMoHqA8tw", price_per_person: true ,per_person:  8, price_event: 0, timeframe:160 , hints: "Garden"})
+Adventure.create({name: "Central Park Zoo" ,location: "ChIJaWjW_PFYwokRFD8a2YQu12U", price_per_person: true,per_person:  18, price_event: 0, timeframe: 120, hints: "Central Park Zoo"})
+Adventure.create({name: "Black Ant" ,location: "ChIJeXX3pYRZwokR-xjPszfpGm4", price_per_person: true,per_person:  20, price_event: 0, timeframe: 190, hints: "Bug Restaurant"})
+Adventure.create({name: "La Caverna" ,location: "ChIJ2z3KFIFZwokRpLxbFwFRMLM", price_per_person: true,per_person:  30, price_event: 0, timeframe: 180, hints: "Cave Restaurant"})
 Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
 Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
 Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
@@ -71,18 +74,6 @@ Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , pric
 Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
 Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
 Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
-Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
-Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
-Adventure.create({name: "" ,location: "", price_per_person: ,per_person:  , price_event: , timeframe: , hints: ""})
-
-
-
-
-User.create({name: "Matt", email: "Matt@wingit.com", password: "password"})
-User.create({name: "Sam", email: "Sam@wingit.com", password: "password"})
-User.create({name: "Ethan", email: "Ethan@wingit.com", password: "password"})
-User.create({name: "David", email: "David@wingit.com", password: "password"})
-
 
 
 User.create({name: "Matt", email: "Matt@wingit.com", password: "password"})
