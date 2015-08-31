@@ -56,10 +56,19 @@ video#bgvid {
 
 #lr{
 	margin-bottom: -1.5em;
+	position: relative;
+    top: 20px;
 }
 
 #copyright{
 	color:white;
+}
+
+#logo{
+	    margin: auto;
+	    position: relative;
+    	top: 4px;
+}
 }
 
 
