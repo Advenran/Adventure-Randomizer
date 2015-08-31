@@ -1,0 +1,15 @@
+.main{
+	background-color: rgba(85, 187, 170, 0.5);
+	padding: 15%;
+}
+
+.big{
+	color:white;
+	text-align:center;
+	position:relative;
+	top:6em;
+}
+
+#tag-line{
+	background-color: #223A36;
+}
