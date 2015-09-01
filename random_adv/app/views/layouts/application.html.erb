@@ -17,12 +17,17 @@
 			<div class="col-md-4">
 			</div>
 			<div class="col-md-4">
-				<div class="main-butt">
-
-					<button class="btn btn-default" type="button" id="lr"><a href="/sessions/new"> <%= logout %> </a>
-
-					</button> <button class="btn btn-default" type="button" id="lr"><a href="/users/new"> SIGNUP </a></button>
-				</div>
+				<% if session[:user_id] %>
+					<div class="main-butt">
+					<button class="btn btn-default" type="button" id="lr"><a href="/sessions"> LOGOUT </a>
+					</button> <button class="btn btn-default" type="button" id="lr"><a href="/users/[:user_id]/prev_adventures"> PAST ADVENTURES </a></button>
+					</div>
+				<% else %>
+					<div class="main-butt">
+						<button class="btn btn-default" type="button" id="lr"><a href="/sessions/new"> LOGIN </a>
+						</button> <button class="btn btn-default" type="button" id="lr"><a href="/users/new"> SIGNUP </a></button>
+					</div>
+				<% end %>
 			</div>	
 		</div>
 	</div>
