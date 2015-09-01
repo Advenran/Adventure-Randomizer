@@ -9,8 +9,8 @@
 		<div class="col-md-3" id="left-bar">
 			<h3>Welcome, <%= @current_user.name %>! </h3>
 			<ul>
-				<li><%= link_to "Past Adventures", user_prev_adventures_path(@current_user) %></li>
-				<li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+				<p><%= link_to "Past Adventures", user_prev_adventures_path(@current_user) %></p>
+				<p><%= link_to "Edit Profile", edit_user_path(@current_user) %></p>
 			</ul>
 			<h3><img src="<%=@icon%>">&nbsp <%= @current_forecast %> </h3>
 		</div>
