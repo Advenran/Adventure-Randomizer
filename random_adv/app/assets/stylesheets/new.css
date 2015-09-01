@@ -30,3 +30,12 @@
 label{
 	    color: white;
 }
+
+#left-bar{
+	/*background-color: rgba(85, 187, 170, 0.5);*/
+	background-color: rgba(34, 58, 54, 0.8);
+	/*padding: 7%;*/
+	padding-top: 2%;
+	padding-left: 3%;
+	padding-bottom: 100%;
+}
