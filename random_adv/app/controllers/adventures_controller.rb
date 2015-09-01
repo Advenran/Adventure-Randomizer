@@ -61,6 +61,7 @@ class AdventuresController < ApplicationController
 
 		@adventure_choice = Adventure.find(params[:id])
 		end_location = @adventure_choice.location
+		@hint = @adventure_choice.hints
 		@current_user = User.find(params[:user_id])
 		api_key = ENV["WING_IT_GOOGLE"]
 

@@ -1,7 +1,19 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
 
+	<h1> <%= @hint %></h1>
 
-
-<% @directions.each do |turn| %>
+	<% @directions.each do |turn| %>
+	<div>
 		<li> <%= turn["html_instructions"].html_safe %> </li>
-		<%= turn["distance"]["text"] %>
+		<p> <%= turn["distance"]["text"] %>, <%= turn["duration"]["text"] %> </p>
+	</div>
 	<% end %>
+
+</body>
+</html>
+
+
