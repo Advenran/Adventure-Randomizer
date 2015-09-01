@@ -19,8 +19,9 @@
 			<div class="col-md-4">
 				<% if session[:user_id] %>
 					<div class="main-butt">
-					<button class="btn btn-default" type="button" id="lr"><a href="/sessions"> LOGOUT </a>
-					</button>
+
+					<%= button_to("LOGOUT", "/sessions", method: :delete) %> 
+				
 					</div>
 				<% else %>
 					<div class="main-butt">
