@@ -5,7 +5,7 @@ class AdventuresController < ApplicationController
 	include HTTParty
 
 	def new
-		actual_user = User.find(session[:user_id])
+		# actual_user = User.find(session[:user_id])
 		@current_user = User.find(session[:user_id])
 			#Wunderground weather API
 			response = HTTParty.get("http://api.wunderground.com/api/abc3ed8ecb8d84a6/conditions/q/NY/new_york.json")
@@ -27,9 +27,9 @@ class AdventuresController < ApplicationController
 				# redirect_to user_path(actual_user)
 		end
 
-		@new_array = Adventure.where("timeframe <= ? AND per_person <= ?", 100, 50)
-		@new_adventure = @new_array.sample
-		@new_prev_adventure = @new_adventure
+		# @new_array = Adventure.where("timeframe <= ? AND per_person <= ?", 100, 50)
+		# @new_adventure = @new_array.sample
+		# @new_prev_adventure = @new_adventure
 
 
 	end
