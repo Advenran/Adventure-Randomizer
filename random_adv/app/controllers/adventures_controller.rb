@@ -2,7 +2,7 @@ require "HTTParty"
 
 class AdventuresController < ApplicationController
 
-	include HTTParty
+	# include HTTParty
 
 	def index
 		
@@ -59,13 +59,16 @@ class AdventuresController < ApplicationController
 
 	def show
 
-		adventure_choice = params[:id]
+		@adventure_choice = Adventure.find(params[:id])
+		end_location = @adventure_choice.location
+		@current_user = User.find(params[:user_id])
 
-		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJaQ2FO55ZwokRKYAlmF0IlzA&destination=place_id:ChIJa1QZIAJZwokRySwnNKYyMno&key=AIzaSyAHag6dnSTJnXF7Kg-le6dNEqsTVZesl_o")
+
+		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJT3jEwaNZwokRS-hniJsDhDg&destination=place_id:#{end_location}&mode=walking&key=API_key")
 
 		@directions = response["routes"][0]["legs"][0]["steps"]
 
-		puts adventure_choice
+	
 
 	
 
