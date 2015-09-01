@@ -61,7 +61,7 @@ class AdventuresController < ApplicationController
 
 		adventure_choice = params[:id]
 
-		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJaQ2FO55ZwokRKYAlmF0IlzA&destination=place_id:ChIJa1QZIAJZwokRySwnNKYyMno&key=AIzaSyAHag6dnSTJnXF7Kg-le6dNEqsTVZesl_o")
+		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJaQ2FO55ZwokRKYAlmF0IlzA&destination=place_id:ChIJa1QZIAJZwokRySwnNKYyMno&key=AIzaSyBdYHv6_e3Ag4vSI1QaroWbGOa6VKbfssM")
 
 		@directions = response["routes"][0]["legs"][0]["steps"]
 
