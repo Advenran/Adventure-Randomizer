@@ -46,7 +46,10 @@ class PrevAdventuresController < ApplicationController
 			puts @new_adventure
 			puts @new_prev_adventure
 
+			redirect_to user_adventure_path(adventure)
+
 			redirect_to '/users/2/prev_adventures'
+
 		else
 			@current_user = User.find(session[:user_id])
 
