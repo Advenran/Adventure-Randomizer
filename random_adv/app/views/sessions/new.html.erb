@@ -3,22 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/new.css">
 </head>
 <body>
-	<h1>LOG IN TO START AN ADVENURE!</h1>
-
-	<%= form_tag "/sessions" do %>
-		Email
-		<%= email_field_tag :email %> <br>
-		Password
-		<%= password_field_tag :password %>
-		<%= submit_tag "log in!" %>
-	<% end %>
-
-	<div>
-		Don't have an account?
-		<a href="/users/new"> Sign up here! </a>
-	</div>
-	
-</body>
-</html>
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-6">
+			<div class="big">
+				<div class="main">
+					<h1 id="tag-line">START YOUR ADVENTURE!</h1>
+					<div class="login-form">
+						<form>
+							<%= form_tag "/sessions" do %>
+							<div class="form-group">
+								<%= label_tag(:email, "Email" , class: "control-label") %>
+								<%= email_field_tag :email , class: "form-control" %> <br>
+								<div>
+									<div class="form-group pass">
+										<%= label_tag(:password, "Password" , class: "control-label") %>
+										<%= password_field_tag :password , class: "form-control" %>
+									</div>
+									<%= submit_tag "LOGIN" , class: "btn btn-default"%>
+									<% end %>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</body>
+			</html>
