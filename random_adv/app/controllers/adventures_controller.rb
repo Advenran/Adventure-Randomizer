@@ -13,7 +13,7 @@ class AdventuresController < ApplicationController
 			weather = response["current_observation"]["weather"]
 
 			@icon = response["current_observation"]["icon_url"]
-			@current_forecast = "#{weather} #{temperature}F!"
+			@current_forecast = "#{weather} #{temperature} F°"
 			# to test
 			# puts "the current weather for your adventure is #{weather} and #{temperature}F!"
 
