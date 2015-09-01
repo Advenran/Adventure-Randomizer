@@ -12,4 +12,20 @@
 
 #tag-line{
 	background-color: #223A36;
+    font-size: 25px;
+    padding: 10px;
+    color: #00C0AC;
+}
+
+.pass{
+		padding-top: 3px;
+	    margin-right: 2.4em;
+}
+
+.form-group{
+	    color: #223A36;
+}
+
+label{
+	    color: white;
 }
