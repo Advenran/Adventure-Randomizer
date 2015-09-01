@@ -4,28 +4,37 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
-	<body>
-		<h3>Welcome, <%= link_to @current_user.name, edit_user_path(@current_user) %>! </h3>
-		<%= link_to "past adventures", user_prev_adventures_path(@current_user) %>
+<body>
+	<div class="row">
+		<div class="col-md-3" id="left-bar">
+			<h3>Welcome, <%= @current_user.name %>! </h3>
+			<ul>
+				<li><%= link_to "Past Adventures", user_prev_adventures_path(@current_user) %></li>
+				<li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+			</ul>
+			<h3>Current Weather</h3>
+			<h5><%= @current_forecast %> </h5>
+		</div>
+		<div class="col-md-6">
+			<h2>Enter info below to start on your adventure!</h2>
 
-	<h3><%= @current_forecast %> </h3>
+			<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
 
-		<h2>Enter info below to start on your adventure!</h2>
-
-		<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
-
-		<%= form_tag ("user_adventures_path") do %>
-		Enter your $
-		<%= text_field_tag :amount_spend %> <br>
-		Enter amount of people
-		<%= text_field_tag :amount_people %> <br>
-		Enter minutes for adventure
-		<%= text_field_tag :amount_time %> <br>
-		<%= submit_tag "submit" %>
-	<% end %>
+			<%= form_tag do %>
+			Enter your $
+			<%= text_field_tag :amount_spend %> <br>
+			Enter amount of people
+			<%= text_field_tag :amount_people %> <br>
+			Enter minutes for adventure
+			<%= text_field_tag :amount_time %> <br>
+			<%= submit_tag "submit" %>
+			<% end %>
 
 
-		
-	</body>
+		</div>
+		<div class="col-md-3" id="right-bar">
+		</div>
+	</div>/
+</body>
 </html>
 

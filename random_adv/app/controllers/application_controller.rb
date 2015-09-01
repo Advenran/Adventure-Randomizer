@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   #checks to see if there is a session 
   def logged_in?
   	if session[:user_id]
+      logout = "LOGOUT"
   		true
   	else
   		false
