@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy'
 
+
   resources :users do 
     resources :adventures
-    resources :prev_adventures, only: :index
+    resources :prev_adventures, only: [:index, :new, :create]
   end
 
 

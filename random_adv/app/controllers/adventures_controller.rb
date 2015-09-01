@@ -4,6 +4,10 @@ class AdventuresController < ApplicationController
 
 	include HTTParty
 
+	def index
+		
+	end
+
 	def new
 		# actual_user = User.find(session[:user_id])
 		@current_user = User.find(session[:user_id])
@@ -17,11 +21,30 @@ class AdventuresController < ApplicationController
 			# to test
 			# puts "the current weather for your adventure is #{weather} and #{temperature}F!"
 
+			@new_prev_adventure = PrevAdventure.new
+
+			#timeframe selected
+			# amount_time = params[:amount_time]
+			#people selected
+			# amount_people = params[:amount_people]
+			#amount selected
+			# amount_spend = params[:amount_spend]
+
+			#we need to get the adventure id and the user id and create
+			#a new previous adventure based on those.
+
+			# @new_array = Adventure.where("timeframe <= ? AND per_person <= ?", amount_time, amount_spend)
+			# @new_adventure = @new_array.sample
+			# @new_prev_adventure = @new_adventure.prev_adventures
+
+			# puts @new_adventure
+			# puts @new_prev_adventure
 
 
 		if logged_in? && check_current_user? #this is our definition of logged in
 			@current_user = User.find(session[:user_id])
 			#below is the code to generate a random adventure
+
 
 		else
 				# redirect_to user_path(actual_user)
@@ -58,15 +81,25 @@ class AdventuresController < ApplicationController
 		#amount selected
 		amount_spend = params[:amount_spend]
 
+		@user_id = params[:user_id]
+
+		@current_user = User.find(session[:user_id])
+
 
 		#grab the affairs for the user accessing the route and pass them into a template
 		if logged_in? && check_current_user? #this is our definition of logged in
 			@current_user = User.find(session[:user_id])
+
 			
 			#logic for randomizer
 			@new_array = Adventure.where("timeframe <= ? AND per_person <= ?", amount_time, amount_spend)
 			@new_adventure = @new_array.sample
-			@new_prev_adventure = @new_adventure
+			@new_prev_adventure = @new_adventure.prev_adventures
+
+			puts @new_adventure
+			puts @new_prev_adventure
+
+			redirect_to user_adventure_path(adventure)
 		else
 				# redirect_to user_path(actual_user)
 		end
