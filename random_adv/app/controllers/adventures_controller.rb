@@ -27,7 +27,9 @@ class AdventuresController < ApplicationController
 				# redirect_to user_path(actual_user)
 		end
 
-		@adventure = Adventure.new
+		@new_array = Adventure.where("timeframe <= ? AND per_person <= ?", 100, 50)
+		@new_adventure = @new_array.sample
+		@new_prev_adventure = @new_adventure
 
 
 	end
@@ -55,15 +57,16 @@ class AdventuresController < ApplicationController
 		amount_people = params[:amount_people]
 		#amount selected
 		amount_spend = params[:amount_spend]
-		#adventure.where({})
-		adventure_choice = Adventure.where(":timeframe < ?", 150)
-
-		puts adventure_choice
 
 
 		#grab the affairs for the user accessing the route and pass them into a template
 		if logged_in? && check_current_user? #this is our definition of logged in
 			@current_user = User.find(session[:user_id])
+			
+			#logic for randomizer
+			@new_array = Adventure.where("timeframe <= ? AND per_person <= ?", amount_time, amount_spend)
+			@new_adventure = @new_array.sample
+			@new_prev_adventure = @new_adventure
 		else
 				# redirect_to user_path(actual_user)
 		end
