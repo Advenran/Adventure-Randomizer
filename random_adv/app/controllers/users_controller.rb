@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 	# Create a new user and redirects to log in
 	def create
 		new_user = User.create(user_params)
-		redirect_to '/login'
+		redirect_to '/sessions/new'
 	end
 
 
