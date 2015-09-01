@@ -62,9 +62,14 @@ class AdventuresController < ApplicationController
 		@adventure_choice = Adventure.find(params[:id])
 		end_location = @adventure_choice.location
 		@current_user = User.find(params[:user_id])
+		api_key = ENV["WING_IT_GOOGLE"]
 
 
-		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJT3jEwaNZwokRS-hniJsDhDg&destination=place_id:#{end_location}&mode=walking&key=AIzaSyBdYHv6_e3Ag4vSI1QaroWbGOa6VKbfssM")
+
+
+
+		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJT3jEwaNZwokRS-hniJsDhDg&destination=place_id:#{end_location}&mode=walking&key=#{api_key}")
+
 
 		@directions = response["routes"][0]["legs"][0]["steps"]
 
