@@ -10,6 +10,10 @@
 	position:relative;
 	top:3em;
 }
+.body-background{
+	background-size: cover;
+	padding-bottom: 18%;
+}
 
 #tag-line{
 	background-color: #223A36;

@@ -4,14 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
-<body>
-	<h3>Here are your previous adventures, <%= @current_user.name %> </h3>
+<body class="body-background" background="http://www.markkowalk.com/wp-content/uploads/2012/02/Times-Square.jpg">
 
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-6">
+			<div class="big">
+				<div class="main">
+					<h3>Here are your previous adventures, <%= @current_user.name %> </h3>
 
-
-	<% @current_user.adventures.each do |adven| %>
-		<li> <%= adven.name %> on <%= adven.created_at %></li>
-	<% end %>
+					<% @current_user.adventures.each do |adven| %>
+						<li> <%= adven.name %> on <%= adven.created_at %></li>
+					<% end %>
+					<br>
+					<input type="button" class="btn btn-default" value="Go back" onclick="history.back(-1)" />
+				</div>
+			</div>
+		</div>
+	</div>
 
 	
 </body>
