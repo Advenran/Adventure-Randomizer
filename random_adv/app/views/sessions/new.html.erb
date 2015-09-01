@@ -9,6 +9,7 @@
 	<div class="row">
 		<div class="col-md-3">
 		</div>
+
 		<div class="col-md-6">
 			<div class="big">
 				<div class="main">
@@ -17,21 +18,22 @@
 						<form>
 							<%= form_tag "/sessions" do %>
 							<div class="form-group">
-								<%= label_tag(:email, "Email" , class: "control-label") %>
-								<%= email_field_tag :email , class: "form-control" %> <br>
-								<div>
-									<div class="form-group pass">
-										<%= label_tag(:password, "Password" , class: "control-label") %>
-										<%= password_field_tag :password , class: "form-control" %>
-									</div>
-									<%= submit_tag "LOGIN" , class: "btn btn-default"%>
-									<% end %>
-								</form>
+								<%= label_tag(:email, "Email", class: "control-label") %>
+								<%= email_field_tag :email, "",class: "form-control" %>
 							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
+							<div class="form-group pass">
+								<%= label_tag(:password, "Password" , class: "control-label") %>
+								<%= password_field_tag :password , "", class: "form-control" %>
+							</div>
+								<%= submit_tag "LOGIN", class: "btn btn-default"%>
+							<% end %>
+						</form>
 					</div>
 				</div>
-			</body>
-			</html>
+			</div>
+			<div class="col-md-3">
+
+		</div>
+	</div>
+</body>
+</html>
