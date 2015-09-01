@@ -1,13 +1,14 @@
 .main{
 	background-color: rgba(85, 187, 170, 0.5);
 	padding: 7%;
+	padding-top: 1;
 }
 
 .big{
 	color:white;
 	text-align:center;
 	position:relative;
-	top:6em;
+	top:3em;
 }
 
 #tag-line{
@@ -18,8 +19,8 @@
 }
 
 .pass{
-		padding-top: 3px;
-	    margin-right: 2.4em;
+		/*padding-top: 3px;*/
+	    /*margin-right: 0.4em;*/
 }
 
 .form-group{
