@@ -16,7 +16,8 @@ class PrevAdventuresController < ApplicationController
 
 	def new
 
-
+		@current_user = User.find(session[:user_id])
+		@new_prev_adventure = PrevAdventure.new
 
 	end
 

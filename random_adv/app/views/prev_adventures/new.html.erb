@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-3" id="left-bar">
+			<h3>Welcome, <%= @current_user.name %>! </h3>
+			<ul>
+				<p><%= link_to "Past Adventures", user_prev_adventures_path(@current_user) %></p>
+				<p><%= link_to "Edit Profile", edit_user_path(@current_user) %></p>
+			</ul>
+			<h3><img src="<%=@icon%>">&nbsp <%= @current_forecast %> </h3>
+		</div>
+		<div class="col-md-6">
+			<h2>Enter info below to start on your adventure!</h2>
+
+
+			<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
+
+
+			<%= form_for @new_prev_adventure do |f| %>
+			Enter your $
+			<%= f.text_field_tag :amount_spend %> <br>
+			Enter amount of people
+			<%= f.text_field_tag :amount_people %> <br>
+			Enter minutes for adventure
+			<%= f.text_field_tag :amount_time %> <br>
+			<%= f.submit_tag "submit" %>
+			<% end %>
+
+
+		</div>
+		<div class="col-md-3" id="right-bar">
+		</div>
+	</div>
+</body>
+</html>
