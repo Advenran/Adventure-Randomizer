@@ -64,7 +64,7 @@ class AdventuresController < ApplicationController
 		@current_user = User.find(params[:user_id])
 
 
-		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJT3jEwaNZwokRS-hniJsDhDg&destination=place_id:#{end_location}&mode=walking&key=API_key")
+		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJT3jEwaNZwokRS-hniJsDhDg&destination=place_id:#{end_location}&mode=walking&key=API_KEY")
 
 		@directions = response["routes"][0]["legs"][0]["steps"]
 
