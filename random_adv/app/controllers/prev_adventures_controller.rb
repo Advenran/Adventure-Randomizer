@@ -47,7 +47,7 @@ class PrevAdventuresController < ApplicationController
 			#check our work
 			puts @new_adventure
 			puts @new_prev_adventure
-
+			
 			redirect_to user_adventure_path(adventure)
 		else
 				# redirect_to user_path(actual_user)
