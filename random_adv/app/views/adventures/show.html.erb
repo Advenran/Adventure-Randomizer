@@ -2,5 +2,6 @@
 
 
 <% @directions.each do |turn| %>
-		<li> <%= turn["html_instructions"] %> </li>
+		<li> <%= turn["html_instructions"].html_safe %> </li>
+		<%= turn["distance"]["text"] %>
 	<% end %>
