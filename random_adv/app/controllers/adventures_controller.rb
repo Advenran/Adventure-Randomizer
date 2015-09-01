@@ -92,12 +92,12 @@ class AdventuresController < ApplicationController
 
 			
 			#logic for randomizer
-			@new_array = Adventure.where("timeframe <= ? AND per_person <= ?", amount_time, amount_spend)
-			@new_adventure = @new_array.sample
-			@new_prev_adventure = @new_adventure.prev_adventures
+			# @new_array = Adventure.where("timeframe <= ? AND per_person <= ?", amount_time, amount_spend)
+			# @new_adventure = @new_array.sample
+			# @new_prev_adventure = @new_adventure.prev_adventures
 
-			puts @new_adventure
-			puts @new_prev_adventure
+			# puts @new_adventure
+			# puts @new_prev_adventure
 
 			redirect_to user_adventure_path(adventure)
 		else

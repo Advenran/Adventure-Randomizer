@@ -21,14 +21,14 @@
 			<p>ENTER YOUR LOCATION, YOUR TIME FRAME, AND BUDGET TO START ON AN ADVENTURE!</p>
 
 
-			<%= form_for do %>
+			<%= form_for @new_prev_adventure do |f| %>
 			Enter your $
-			<%= text_field_tag :amount_spend %> <br>
+			<%= f.text_field_tag :amount_spend %> <br>
 			Enter amount of people
-			<%= text_field_tag :amount_people %> <br>
+			<%= f.text_field_tag :amount_people %> <br>
 			Enter minutes for adventure
-			<%= text_field_tag :amount_time %> <br>
-			<%= submit_tag "submit" %>
+			<%= f.text_field_tag :amount_time %> <br>
+			<%= f.submit_tag "submit" %>
 			<% end %>
 
 
