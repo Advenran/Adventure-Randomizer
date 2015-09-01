@@ -22,7 +22,11 @@ class ApplicationController < ActionController::Base
   		true
   	else
   		false
-  	end
+    end
+  end
+
+  def geolocation
+    window.onload = function() {}
   end
 
 end
