@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
-<body>
-	<h3>Edit your account, <%= @current_user.name %></h3>
+<body style="background-size:cover" background="http://www.markkowalk.com/wp-content/uploads/2012/02/Times-Square.jpg">
+	<!-- <h3>Edit your account, <%= @current_user.name %></h3> -->
 
-	<%= form_for @user do |f| %>
+<!-- 	<%= form_for @user do |f| %>
 		Enter your email
 		<%= f.text_field :email %> <br>
 		Enter your name
@@ -15,7 +15,58 @@
 		Enter your password
 		<%= f.password_field :password %> <br>
 		<%= f.submit "Update account" %>
-	<% end %>
-	
+	<% end %> -->
+
+
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+
+		<div class="col-md-6">
+			<div class="big">
+				<div class="main">
+					<h1 id="tag-line">Edit your account, <%= @current_user.name %></h1>
+					<div class="login-form">
+						<%= form_for @user do |f| %>
+						<div class="form-group">
+							Enter your email
+							<%= f.text_field :email, class: "form-control"%> <br>
+						</div>
+						<div class="form-group">
+							Enter your name
+							<%= f.text_field :name, class: "form-control"%> <br>
+						</div>
+						<div class="form-group">
+							Enter your password
+							<%= f.password_field :password, class: "form-control"%> <br>
+						</div>
+							<%= f.submit "Update account", class: "btn btn-default"%>
+						<% end %>
+						<input type="button" class="btn btn-default" value="Cancel" onclick="history.back(-1)" />
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
