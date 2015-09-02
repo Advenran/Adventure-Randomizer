@@ -10,11 +10,30 @@
 	position:relative;
 	top:3em;
 }
+.bar{
+	border: 2px solid white;
+}
+.main-directions{
+	background-color: rgba(34, 58, 54, 0.8);
+	padding: 7%;
+	padding-top: 1%;
+}
+.big-directions{
+	background-color: rgba(34, 58, 54, 0.8)
+	color: white;
+	position: relative;
+	top:3em;
+}
 .body-background{
 	background-size: cover;
 	padding-bottom: 18%;
 }
-
+.hint{
+	padding-bottom: 1%;
+}
+.turn-directions{
+	padding-top: 2%;
+}
 #tag-line{
 	background-color: #223A36;
     font-size: 25px;

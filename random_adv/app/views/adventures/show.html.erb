@@ -1,19 +1,34 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title></title>
+	<meta charset="UTF-8">
+	<title>Document</title>
 </head>
-<body>
+<body class="body-background" background="http://www.markkowalk.com/wp-content/uploads/2012/02/Times-Square.jpg">
 
-	<h1> <%= @hint %></h1>
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-6">
+			<div class="big-directions">
+				<div class="main-directions">
+					<h1 class="hint" style="color:white"> <%= @hint %></h1>
+					<div class="bar">
+					</div>
 
-	<% @directions.each do |turn| %>
-	<div>
-		<li> <%= turn["html_instructions"].html_safe %> </li>
-		<p> <%= turn["distance"]["text"] %>, <%= turn["duration"]["text"] %> </p>
+					<% @directions.each do |turn| %>
+					<div class="turn-directions">
+						<li> <%= turn["html_instructions"].html_safe %>. &nbsp &nbsp<%= turn["distance"]["text"] %>, <%= turn["duration"]["text"] %></li>
+						<!-- <p> <%= turn["distance"]["text"] %>, <%= turn["duration"]["text"] %> </p> -->
+					</div>
+					<% end %>
+	
+			</div>
+		</div>
 	</div>
-	<% end %>
 
 </body>
 </html>
+
 
 
