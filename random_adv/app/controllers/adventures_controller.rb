@@ -47,6 +47,18 @@ class AdventuresController < ApplicationController
 		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{lat},#{long}&destination=place_id:#{end_location}&mode=#{mode}&key=#{api_key}")
 		@total_duration = response["routes"][0]["legs"][0]["duration"]
 		@directions = response["routes"][0]["legs"][0]["steps"]
+
+		client_id = "ucWa1PKE9x4YgQ_xouwuZFHRW1H-gGw9"
+    	client_secret = "PrbeliotjJLysW2yDZq2eFqN7cR_YuGTEGcPUmgK"
+    	base_url = "https://login.uber.com/oauth/authorize"
+    	query ={
+        response_type: 'code',
+        client_id: client_id,
+        scope: 'request'
+    	}
+    	encoded_query = URI.encode_www_form(query)
+    	@url = base_url + "?" + encoded_query
+
 	end
 
 
