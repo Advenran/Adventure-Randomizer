@@ -28,7 +28,6 @@ class AdventuresController < ApplicationController
 	def show
 		#env variable key and HTTP response for Google API
 		api_key = ENV["WING_IT_GOOGLE"]
-		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJT3jEwaNZwokRS-hniJsDhDg&destination=place_id:#{end_location}&mode=walking&key=#{api_key}")
 		
 		#for rendering page with their destination directions
 		@adventure_choice = Adventure.find(params[:id])
@@ -36,18 +35,17 @@ class AdventuresController < ApplicationController
 		@hint = @adventure_choice.hints
 		@current_user = User.find(params[:user_id])
 
-		@total_duration = response["routes"][0]["legs"]["duration"]
-
-		api_key = ENV["WING_IT_GOOGLE"]
 		
 
+		
+		# @ip = request.remote_ip
 
     lat = cookies[:lat]
     long = cookies[:long]
 
 		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{lat},#{long}&destination=place_id:#{end_location}&mode=walking&key=#{api_key}")
 
-
+		@total_duration = response["routes"][0]["legs"][0]["duration"]
 		@directions = response["routes"][0]["legs"][0]["steps"]
 	end
 
