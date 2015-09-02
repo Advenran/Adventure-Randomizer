@@ -37,7 +37,7 @@ You can select your budget and timeframe and we will find a location that meets 
   + Utilized environmental variables for our request.
 
 ## Databases
-+ Postgresql tables
++ PostgreSQL tables
   + Users (Users) - contains our user information
   + Adventures (Adventures) - contains seeds of selected adventures
   + PrevAdventures (Previous Adventures) - is for persisting a specific user's adventures
