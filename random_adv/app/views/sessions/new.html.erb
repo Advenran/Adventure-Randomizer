@@ -18,11 +18,11 @@
 							<%= form_tag "/sessions" , url: {method: :POST} do %>
 							<div class="form-group">
 								<%= label_tag(:email, "Email", class: "control-label") %>
-								<%= email_field_tag :email, "",class: "form-control" %>
+								<%= email_field_tag :email, "",class: "form-control", :required => true  %>
 							</div>
 							<div class="form-group pass">
 								<%= label_tag(:password, "Password" , class: "control-label") %>
-								<%= password_field_tag :password , "", class: "form-control" %>
+								<%= password_field_tag :password , "", class: "form-control", :required => true  %>
 							</div>
 								<%= submit_tag "LOGIN", class: "btn btn-default"%>
 							<% end %>
