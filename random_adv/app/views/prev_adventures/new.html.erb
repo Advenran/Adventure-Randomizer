@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
-<body>
+<body class="body-background" background="http://www.markkowalk.com/wp-content/uploads/2012/02/Times-Square.jpg">
 
 	<div class="row">
 
@@ -18,39 +18,37 @@
 		</div>
 
 
-
-
-
 		<div class="col-md-6">
-			<div class="big">
+			<div class="big-form">
 				<div class="main">
-			<h2>Enter your budget, number of people and the timeframe to start</h2>
-
-			<%= form_tag %>
-			<div class="form-group">
-				Enter your $
-				<%= text_field_tag :amount_spend, "", class: "form-control" %>
+					<h2 class="h2head">Enter your budget, number of people and the timeframe to start</h2>
+					<div class="bar">
+					</div>
+					<%= form_tag %>
+					<div class="form-group">
+						Enter your $
+						<%= text_field_tag :amount_spend, "", class: "form-control" %>
+					</div>
+					<div class="form-group">
+						Enter amount of people
+						<%= text_field_tag :amount_people, "", class: "form-control" %>
+					</div>
+					<div class="form-group">
+						Enter minutes for adventure
+						<%= text_field_tag :amount_time, "", class: "form-control" %>
+					</div>
+					<div class="form-group">
+						How would you like to get there?
+						<%= select_tag :mode_transportation, options_for_select([ 'walk', 'bike', 'subway', 'drive' ], 'walk'), class: "form-control" %>
+					</div>
+						<%= submit_tag "submit", class: "btn btn-default"%>
+				</div>
 			</div>
-			<div class="form-group">
-				Enter amount of people
-				<%= text_field_tag :amount_people, "", class: "form-control" %>
-			</div>
-			<div class="form-group">
-				Enter minutes for adventure
-				<%= text_field_tag :amount_time, "", class: "form-control" %>
-			</div>
-			<div class="form-group">
-				How would you like to get there?
-				<%= select_tag :mode_transportation, options_for_select([ 'walk', 'bike', 'subway', 'drive' ], 'walk'), class: "form-control" %>
-			</div>
-				<%= submit_tag "submit", class: "btn btn-default"%>
-		
-</div>
-</div>
-
 		</div>
+
 		<div class="col-md-3" id="right-bar">
 		</div>
+		
 	</div>
 </body>
 </html>

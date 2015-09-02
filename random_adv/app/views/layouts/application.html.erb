@@ -19,9 +19,10 @@
 			<div class="col-md-4">
 				<% if session[:user_id] %>
 					<div class="main-logout">
-
-					<%= button_to("LOGOUT", "/sessions", method: :delete, class: "btn btn-default") %> 
-				
+						
+						 Welcome, <%= @current_user.name %>!
+						<%= button_to("LOGOUT", "/sessions", method: :delete, class: "btn btn-default") %>
+						
 					</div>
 				<% else %>
 					<div class="main-butt">
@@ -50,10 +51,7 @@
 			</div>
 	</div>
 	</footer>
-	<video autoplay loop poster="polina.jpg" id="bgvid">
-		<source src="https://pdlvimeocdn-a.akamaihd.net/61594/768/159877053.mp4?token2=1441145297_8d4590781e25a8c5bdb36d8f06bccaa9&aksessionid=482fb0feb78b4aae">
-		<source src="https://pdlvimeocdn-a.akamaihd.net/61594/768/159877053.mp4?token2=1441145297_8d4590781e25a8c5bdb36d8f06bccaa9&aksessionid=482fb0feb78b4aae">
-	</video>
+	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
