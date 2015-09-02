@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 	include HTTParty
 	def new
+		@current_user = User.find(session[:user_id])
 	end
 
 	def create
