@@ -29,4 +29,17 @@ class ApplicationController < ActionController::Base
     window.onload = function() {}
   end
 
+
+    client_id = "ucWa1PKE9x4YgQ_xouwuZFHRW1H-gGw9"
+    client_secret = "PrbeliotjJLysW2yDZq2eFqN7cR_YuGTEGcPUmgK"
+    base_url = "https://github.com/login/oauth/authorize"
+    query ={
+        response_type: 'code',
+        client_id: client_id,
+        scope: 'request'
+    }
+    encoded_query = URI.encode_www_form(query)
+    @url = "ssdsdadsdasds"
+
+
 end

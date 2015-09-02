@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete '/sessions' => 'sessions#destroy'
 
   post '/users/:user_id/prev_adventures/new' => 'prev_adventures#create'
+  get '/uber' => 'uber#index'
 
 
   resources :users do 
