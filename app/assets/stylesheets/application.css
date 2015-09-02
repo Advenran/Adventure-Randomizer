@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require welcome
+ *= require animate
+ *= require new
+ */
+
+ 
+body{
+	color: #16a085;
+	font-family: Montserrat;
+}
+
+a{
+	color: #55bbaa;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color:white;
+}
+
+#main{
+	animation-delay: 2s;
+}
+
+#mainone{
+	animation-delay: 5s;
+}
+
+.main-butt{
+	text-align: center;
+}
+.main-logout{
+	text-align: center;
+	display: inline-block;
+	padding-top: 6%;
+	padding-left: 10%;
+}
+
+
+.header{
+	padding-bottom: 2%;
+	background-color: rgba(34, 58, 54, 1);
+	border-bottom: 5px solid #55bbaa;
+}
+
+.footer{
+	background-color: rgba(34, 58, 54, 1);
+	border-top: 5px solid #55bbaa;
+	text-align: center;
+	padding-top:0.5%;
+}
+
+#lr{
+	margin-bottom: -1.5em;
+	position: relative;
+    top: 20px;
+}
+
+#copyright{
+	color:white;
+}
+
+#logo{
+	    margin: auto;
+	    position: relative;
+    	top: 4px;
+}
+
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+
+
+
+
+
+
+
