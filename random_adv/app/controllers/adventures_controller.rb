@@ -40,7 +40,7 @@ class AdventuresController < ApplicationController
 
 		api_key = ENV["WING_IT_GOOGLE"]
 		
-		# @ip = request.remote_ip
+
 
     lat = cookies[:lat]
     long = cookies[:long]
