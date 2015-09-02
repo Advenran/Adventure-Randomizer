@@ -61,6 +61,7 @@ class AdventuresController < ApplicationController
 		amount_spend = params[:amount_spend]
 		mode_of_travel = params[:mode_of_travel]
 
+
 		@user_id = params[:user_id]
 		@current_user = User.find(session[:user_id])
 
