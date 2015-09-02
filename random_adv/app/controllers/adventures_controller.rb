@@ -41,14 +41,11 @@ class AdventuresController < ApplicationController
 		api_key = ENV["WING_IT_GOOGLE"]
 		
 		# @ip = request.remote_ip
-    location = Geocoder.search("208.185.23.206")
-    # @long = location[0].longitude
-    # @lat = location[0].latitude
 
+    lat = cookies[:lat]
+    long = cookies[:long]
 
-		puts location
-
-		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJT3jEwaNZwokRS-hniJsDhDg&destination=place_id:#{end_location}&mode=walking&key=#{api_key}")
+		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{lat},#{long}&destination=place_id:#{end_location}&mode=walking&key=#{api_key}")
 
 
 		@directions = response["routes"][0]["legs"][0]["steps"]
