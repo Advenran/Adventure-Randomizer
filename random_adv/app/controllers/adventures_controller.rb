@@ -43,9 +43,11 @@ class AdventuresController < ApplicationController
 	    lat = cookies[:lat]
 	    long = cookies[:long]
 	    mode = @current_adventure.last.mode_of_travel
+	    puts mode
 	    #Google API request
 		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{lat},#{long}&destination=place_id:#{end_location}&mode=#{mode}&key=#{api_key}")
-		@total_duration = response["routes"][0]["legs"][0]["duration"]
+		puts response["routes"][0]["legs"][0]["travel_mode"]
+		# @total_duration = response["routes"][0]["legs"][0]["duration"]
 		@directions = response["routes"][0]["legs"][0]["steps"]
 
 		client_id = "ucWa1PKE9x4YgQ_xouwuZFHRW1H-gGw9"
