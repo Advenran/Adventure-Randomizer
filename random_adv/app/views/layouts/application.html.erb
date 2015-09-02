@@ -20,7 +20,6 @@
 				<% if session[:user_id] %>
 					<div class="main-logout">
 						
-						 Welcome, <%= @current_user.name %>!
 						<%= button_to("LOGOUT", "/sessions", method: :delete, class: "btn btn-default") %>
 						
 					</div>

@@ -10,21 +10,7 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
 
-			def success(pos)
-				crd = pos.coords;
-
-				puts 'Your current position is:'
-				puts 'Latitude : ' + crd.latitude
-				puts 'Longitude: ' + crd.longitude
-				puts 'More or less ' + crd.accuracy + ' meters.'
-			end
-
-			def error(err)
-			  puts warn('ERROR(' + err.code + '): ' + err.message);
-			end
-
-			# navigator.geolocation.getCurrentPosition(success, error, options);
-
+			
 
 			redirect_to new_user_prev_adventure_path(user)
 		else
