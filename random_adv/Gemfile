@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
 
+gem 'rails_12factor'
+
+#Animate.css for Rails
+# gem "animate-rails"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
@@ -52,6 +57,6 @@ group :development do
   gem 'spring'
 
   #Animate.css for Rails
-  gem "animate-rails"
+  # gem "animate-rails"
 end
 
