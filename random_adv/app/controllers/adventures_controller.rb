@@ -51,7 +51,7 @@ class AdventuresController < ApplicationController
 		@directions = response["routes"][0]["legs"][0]["steps"]
 
 		client_id = "ucWa1PKE9x4YgQ_xouwuZFHRW1H-gGw9"
-    	client_secret = "PrbeliotjJLysW2yDZq2eFqN7cR_YuGTEGcPUmgK"
+    	client_secret = "h_9nd2BUa1LVvLWJ9T2gkWDJ8BUW9ITUsEVvVlgR"
     	base_url = "https://login.uber.com/oauth/authorize"
     	query ={
         response_type: 'code',
