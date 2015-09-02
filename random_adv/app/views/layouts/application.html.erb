@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <title>RandomAdv</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="header">
+		<div class="row">
+			<div class="col-md-4">
+			<img src="<%= asset_path( 'ugh.png' ) %>" class="img-responsive" id="logo"/>
+			</div>
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+				<% if session[:user_id] %>
+					<div class="main-logout">
+						
+						<%= button_to("LOGOUT", "/sessions", method: :delete, class: "btn btn-default") %>
+						
+					</div>
+				<% else %>
+					<div class="main-butt">
+						</button> <button class="btn btn-default" type="button" id="lr"><a href="/users/new"> SIGNUP </a></button>
+					</div>
+				<% end %>
+			</div>	
+		</div>
+	</div>
+
+				<!-- content -->
+				<%= yield %>
+			
+	<footer class="footer navbar-fixed-bottom" id="fter">
+     <div class="row">
+			<div class="col-md-4">
+				<a href="https://github.com/Advenran/Adventure-Randomizer"><img src="<%= asset_path( 'white.png' ) %>"/></a>
+			</div>
+			<div class="col-md-4">
+				<div class="container">
+     			</div>
+			</div>
+			<div class="col-md-4">
+				<h6 id="copyright">Copyright ©2015, All Rights Reserved</h6>
+			</div>
+	</div>
+	</footer>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
