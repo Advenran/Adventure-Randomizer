@@ -26,6 +26,10 @@ class AdventuresController < ApplicationController
 	end
 
 	def show
+	    @adv_id = params[:id]
+	    @user_id = params[:user_id]
+	    @current_adventure = PrevAdventure.where("adventure_id = ? AND user_id = ?", @adv_id, @user_id)
+		
 		#env variable key and HTTP response for Google API
 		api_key = ENV["WING_IT_GOOGLE"]
 		
@@ -35,20 +39,12 @@ class AdventuresController < ApplicationController
 		@hint = @adventure_choice.hints
 		@current_user = User.find(params[:user_id])
 
-		
-
-
-		
-		# @ip = request.remote_ip
-
+		#Google API variables to set the request
 	    lat = cookies[:lat]
 	    long = cookies[:long]
-	    mode = params[:mode_of_travel]
-
-		# mode_of_travel = params[:mode_of_travel]
-
+	    mode = @current_adventure.last.mode_of_travel
+	    #Google API request
 		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{lat},#{long}&destination=place_id:#{end_location}&mode=#{mode}&key=#{api_key}")
-		puts "#{response} this is the response ************"
 		@total_duration = response["routes"][0]["legs"][0]["duration"]
 		@directions = response["routes"][0]["legs"][0]["steps"]
 	end

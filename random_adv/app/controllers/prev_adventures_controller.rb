@@ -62,13 +62,14 @@ class PrevAdventuresController < ApplicationController
 			#amount selected
 			amount_spend = params[:amount_spend]
 			#user id
+			@mode_of_travel = params[:mode_of_travel]
 			@user_id = params[:user_id]
 
 			@new_array = Adventure.where("timeframe <= ? AND per_person <= ?", amount_time, amount_spend)
 			@new_adventure = @new_array.sample
 	#adventure id
 			@adventure_id = @new_adventure.id
-				PrevAdventure.create({:user_id => @user_id, :adventure_id => @adventure_id})
+				PrevAdventure.create({:user_id => @user_id, :adventure_id => @adventure_id, :mode_of_travel => @mode_of_travel})
 				redirect_to user_adventure_path(@user_id,@adventure_id)
 		end
 	end
