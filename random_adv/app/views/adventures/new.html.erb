@@ -29,7 +29,7 @@
 			Enter minutes for adventure
 			<%= f.text_field_tag :amount_time %> <br>
 			How would you like to get there?
-			<%= f.select_tag :mode_of_travel, options_for_select ("Walk", "Bike", "Subway", "Drive") %>
+			<%= f.select_tag :mode_of_travel, options_for_select (["Walk" => "Walking"], ["Bike" => "Bicycling"], ["Subway" => "Transit"], ["Drive" => "Driving"]) %>
 			<%= f.submit_tag "submit" %>
 			<% end %>
 

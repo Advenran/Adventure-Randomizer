@@ -37,14 +37,18 @@ class AdventuresController < ApplicationController
 
 		
 
+
 		
 		# @ip = request.remote_ip
 
-    lat = cookies[:lat]
-    long = cookies[:long]
+	    lat = cookies[:lat]
+	    long = cookies[:long]
+	    mode = params[:mode_of_travel]
 
-		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{lat},#{long}&destination=place_id:#{end_location}&mode=walking&key=#{api_key}")
+		# mode_of_travel = params[:mode_of_travel]
 
+		response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{lat},#{long}&destination=place_id:#{end_location}&mode=#{mode}&key=#{api_key}")
+		puts "#{response} this is the response ************"
 		@total_duration = response["routes"][0]["legs"][0]["duration"]
 		@directions = response["routes"][0]["legs"][0]["steps"]
 	end
@@ -55,6 +59,8 @@ class AdventuresController < ApplicationController
 		amount_time = params[:amount_time]
 		amount_people = params[:amount_people]
 		amount_spend = params[:amount_spend]
+		mode_of_travel = params[:mode_of_travel]
+
 		@user_id = params[:user_id]
 		@current_user = User.find(session[:user_id])
 
