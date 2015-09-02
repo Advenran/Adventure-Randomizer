@@ -1,4 +1,4 @@
-require "HTTParty"
+
 
 class AdventuresController < ApplicationController
 

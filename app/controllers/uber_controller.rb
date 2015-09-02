@@ -1,4 +1,4 @@
-require "HTTParty"
+
 class UberController < ApplicationController
 	def index
 	client_id = "ucWa1PKE9x4YgQ_xouwuZFHRW1H-gGw9"

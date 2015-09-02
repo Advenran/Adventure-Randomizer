@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
+	
 	include HTTParty
+	
 	def new
 		
 	end
