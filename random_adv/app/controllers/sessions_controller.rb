@@ -4,6 +4,8 @@ class SessionsController < ApplicationController
 		
 	end
 
+	
+
 	def create
 		#logged in means a user_id is stored in a session
 		user = User.find_by({email: params[:email]})
