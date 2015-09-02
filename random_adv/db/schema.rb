@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150828234946) do
     t.integer  "adventure_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "mode_of_travel"
   end
 
   create_table "users", force: :cascade do |t|

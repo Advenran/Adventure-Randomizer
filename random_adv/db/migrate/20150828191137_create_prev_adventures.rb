@@ -4,6 +4,7 @@ class CreatePrevAdventures < ActiveRecord::Migration
     	t.integer :user_id
     	t.integer :adventure_id
     	t.timestamps
+    	t.string :mode_of_travel
     end
   end
 end
